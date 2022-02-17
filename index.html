@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Amount</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-16">Monthly <span class="font-semibold	text-purple-600">Amount</span>!!!</h1>
+        <br>
+
+    </header>
+    <main>
+        <section class="grid  sm:grid-cols-1 lg:grid-cols-2 ">
+            <section>
+                <img class="border pl-12 mt-8 " src="images/moneyPicture.jpg" alt="">
+            </section>
+            <section class="bg-green-100 w-2/4 p-8 mx-auto mt-8 mb-4 ">
+                <h4 class="text-xl mb-2 text-center font-semibold">Income</h4>
+                <div class="grid grid-cols-1 gap-2 place-content-center ">
+                    <!-- //income -->
+                    <div class=" flex flex-row gap-1">
+                        <h6>Income: </h6>
+
+                        <input id="user-income" class="border block border-gray-400	rounded w-3/4 mb-4 px-2"
+                            type="text">
+                    </div>
+                    <h4 class="text-center font-semibold">Expenses</h4>
+                    <!-- food -->
+                    <div class="flex flex-row gap-1">
+                        <h6>Food: </h6>
+                        <input id="user-food" class="border block border-gray-400	rounded w-3/4 mb-4 px-2" type="text"
+                            name="">
+                    </div>
+                    <!-- rent -->
+                    <div class="flex flex-row gap-1">
+                        <h6>Rent: </h6>
+                        <input id="user-rent" class="border block border-gray-400	rounded w-3/4 mb-4 px-2" type="text"
+                            name="">
+                    </div>
+                    <!-- cloths -->
+                    <div class="flex flex-row gap-1">
+                        <h6>Cloths: </h6>
+                        <input id="user-cloth" class="border block border-gray-400	rounded w-3/4 mb-4 px-2" type="text"
+                            name="">
+                    </div>
+                    <!-- calculate button -->
+                    <button id="calculate-button"
+                        class="bg-yellow-600 px-4 rounded py-2 text-white font-medium">Calculate</button>
+                    <!-- error message -->
+                    <p id="number-error" style="display:none;color:red; text-align: center; font-weight: 700;">Error!
+                        Please enter a number type value</p>
+                    <p id="negative-error" style="display:none;color:red;text-align: center; font-weight: 700;">Error!
+                        Please enter positive value</p>
+                    <p id="income-error" style="display:none;color:red;text-align: center; font-weight: 700;">Error!
+                        Expenses cant be greater than your income.
+                    </p>
+
+
+
+                    <h4 class="text-center font-semibold">Total Expenses: <span id="total-expense">00 </span></h4>
+
+                    <h4 class="text-center font-semibold">Balance: <span id="total-balance">00</span></h4>
+                    <!-- save -->
+                    <div class="flex flex-row gap-1 place-content-center">
+                        <div class="flex flex-row gap-1">
+                            <h6 class="font-semibold">save: </h6>
+                            <input id="user-saving" class=" border border-gray-400	rounded w-3/4 mb-4 px-2" type="text"
+                                name="">
+                            <h5>%</h5>
+                        </div>
+                        <div>
+                            <button id="save-button"
+                                class="bg-yellow-600 px-4 rounded py-0 text-white font-medium">save</button>
+
+                        </div>
+
+                    </div>
+                    <p id="save-error" style="display:none;color:red;text-align: center; font-weight: 700;">
+                        Error! You dont have enough money to save.
+                    </p>
+                    <h4 class="text-center font-semibold">Saving Amount: <span id="saving-amount">0000 </span> </h4>
+                    <h4 class="text-center font-semibold">Remaining Balance: <span id="remaining-balance">0000 </span>
+                    </h4>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="js/app2.js"></script>
+</body>
+
+</html>
